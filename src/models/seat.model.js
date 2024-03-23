@@ -5,7 +5,7 @@ const seatSchema = new Schema({
     _id: { type: objectId, auto: true },
     room_id: { type: objectId, required: true, ref: 'rooms' },
     name: { type: String, required: true },
-    is_available: { type: String, default: 'available' },
+    is_available: { type : Boolean , default: true },
     type: { type: String , enum: ["nomal" , "vip", "couple" ], required: true}
 }, {
     versionKey: false,
